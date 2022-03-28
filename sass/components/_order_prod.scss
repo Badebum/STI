@@ -98,12 +98,12 @@
   position: absolute;
   left: 0;
   top: 3px;
-  background: url(../../img/svg/radio/radio-1.svg) 0 0 no-repeat;
+  background: url(../img/svg/radio/radio-1.svg) 0 0 no-repeat;
 }
 
 /* Checked */
 .form_radio .radio_btn[type='radio']:checked + label:before {
-  background: url(../../img/svg/radio/radio-2.svg) 0 0 no-repeat;
+  background: url(../img/svg/radio/radio-2.svg) 0 0 no-repeat;
 }
 
 .data_buyer_person {
@@ -277,12 +277,12 @@
   position: absolute;
   left: -20px;
   top: 0;
-  background: url(../../img/svg/radio/checkbox_1.svg) 0 0 no-repeat;
+  background: url(../img/svg/radio/checkbox_1.svg) 0 0 no-repeat;
 }
 
 /* Checked */
 .polici_block input[type='checkbox']:checked + label:before {
-  background: url(../../img/svg/radio/checkbox_2.svg) 0 0 no-repeat;
+  background: url(../img/svg/radio/checkbox_2.svg) 0 0 no-repeat;
 }
 
 @media screen and (min-width: 768px) {

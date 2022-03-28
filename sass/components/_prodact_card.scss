@@ -114,33 +114,33 @@
       }
 
       &:hover > .print_icon {
-        background-image: url(../../img/svg/ptint_red.svg);
+        background-image: url(../img/svg/ptint_red.svg);
       }
 
       &:active > .print_icon {
-        background-image: url(../../img/svg/print_white.svg);
+        background-image: url(../img/svg/print_white.svg);
       }
 
       &:hover > .clean_icon {
-        background-image: url(../../img/svg/cross_red.svg);
+        background-image: url(../img/svg/cross_red.svg);
       }
 
       &:active > .clean_icon {
-        background-image: url(../../img/svg/cross_white.svg);
+        background-image: url(../img/svg/cross_white.svg);
       }
     }
 
     & .print_icon {
       width: 22px;
       height: 22px;
-      background-image: url(../../img/svg/print.svg);
+      background-image: url(../img/svg/print.svg);
       margin-right: 16px;
     }
 
     & .clean_icon {
       width: 18px;
       height: 18px;
-      background-image: url(../../img/svg/cross_black.svg);
+      background-image: url(../img/svg/cross_black.svg);
       background-repeat: no-repeat;
       background-size: cover;
       margin-right: 16px;
@@ -202,9 +202,6 @@
   }
 }
 
-// .card_list {
-//   margin-bottom: 55px;
-// }
 
 .prodact_card {
   position: relative;
@@ -234,12 +231,11 @@
   width: 141px;
   height: 106px;
   position: relative;
-  // margin-left: auto;
-  // margin-right: auto;
+
   display: inline-block;
 
   & img {
-    // width: 100%;
+  
     height: 100%;
   }
 
@@ -261,9 +257,6 @@
   }
 }
 
-// .title_card {
-//   max-width: 228px;
-// }
 
 .code {
   display: block;
