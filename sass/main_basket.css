@@ -744,6 +744,10 @@ header {
   margin: 36px 0 16px 0;
 }
 
+.breadcrumbs {
+  display: none;
+}
+
 .btn_print_clean {
   display: none;
 }
@@ -800,6 +804,15 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+  .breadcrumbs {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #545151;
+    opacity: 0.5;
+    margin: 36px 0 34px 0;
+  }
   .code.skidka {
     display: none;
   }
@@ -1136,6 +1149,9 @@ header {
 }
 
 @media screen and (min-width: 1319px) {
+  .breadcrumbs {
+    margin: 25px 0 34px 0;
+  }
   .price_area {
     height: inherit;
   }
@@ -1296,6 +1312,14 @@ header {
         -ms-flex-align: center;
             align-items: center;
   }
+  .promocode_input {
+    width: 312px;
+    height: 48px;
+    text-align: left;
+    padding: 14px;
+    margin: 0;
+    margin-right: 22px;
+  }
   .final_price {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1308,7 +1332,7 @@ header {
     margin-right: 42px;
   }
   .final_price .old_price {
-    left: 279px;
+    left: 250px;
     font-size: 26px;
     line-height: 85.69%;
     top: 30px;
