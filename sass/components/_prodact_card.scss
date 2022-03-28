@@ -1,0 +1,642 @@
+.titel_page {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 85.69%;
+  margin: 36px 0 16px 0;
+}
+
+.btn_print_clean {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .tabl_col {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 0 24px;
+    width: 100%;
+  }
+
+  .tabl_name,
+  .td_none {
+    display: none;
+  }
+
+  .mobl_count_btn {
+    position: absolute;
+    left: 14px;
+    bottom: 25px;
+  }
+
+  .mobl_price_area {
+    position: absolute;
+    right: 14px;
+    bottom: 16px;
+  }
+
+  .card_face {
+    border: 1px solid #d0cfcf;
+    min-width: 288px;
+    height: 300px;
+    padding: 14px;
+
+    & .delet_btn {
+      position: absolute;
+      width: 16px;
+      top: 14px;
+      right: 14px;
+      cursor: pointer;
+    }
+  }
+
+  .prodact_card {
+    margin-bottom: 24px;
+  }
+
+  & .price_area {
+    & .old_price {
+      left: 6%;
+    }
+  }
+
+  .prod_name {
+    width: 250px;
+  }
+}
+
+.tab_skidka,
+.tab_prod_price {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .code.skidka {
+    display: none;
+  }
+
+  .btn_print_clean {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+
+    & .print_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 166px;
+      height: 40px;
+
+      background-color: unset;
+      border: 1px solid #d0cfcf;
+      border-radius: 1px;
+
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: -0.015em;
+      color: #383838;
+
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
+
+      &:hover,
+      &:focus {
+        color: #ec1e22;
+        border: 1px solid #ec1e22;
+      }
+
+      &:active {
+        background-color: #ec1e22;
+        color: #fff;
+      }
+
+      &:hover > .print_icon {
+        background-image: url(../../img/svg/ptint_red.svg);
+      }
+
+      &:active > .print_icon {
+        background-image: url(../../img/svg/print_white.svg);
+      }
+
+      &:hover > .clean_icon {
+        background-image: url(../../img/svg/cross_red.svg);
+      }
+
+      &:active > .clean_icon {
+        background-image: url(../../img/svg/cross_white.svg);
+      }
+    }
+
+    & .print_icon {
+      width: 22px;
+      height: 22px;
+      background-image: url(../../img/svg/print.svg);
+      margin-right: 16px;
+    }
+
+    & .clean_icon {
+      width: 18px;
+      height: 18px;
+      background-image: url(../../img/svg/cross_black.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 16px;
+    }
+  }
+
+  .tabl_col {
+    display: table;
+    border-collapse: collapse;
+    height: 38px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    & .col_name {
+      border: 1px solid #d0cfcf;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 85.69%;
+      text-align: center;
+      letter-spacing: -0.015em;
+      color: #383838;
+      padding: 12px 0;
+    }
+  }
+
+  .table_col {
+    &_1 {
+      min-width: 228px;
+    }
+
+    &_2 {
+      width: 130px;
+    }
+
+    &_3 {
+      width: 172px;
+    }
+
+    &_4 {
+      width: 175px;
+    }
+
+    &_5 {
+      width: 172px;
+    }
+  }
+
+  .tab_skidka,
+  .tab_prod_price {
+    display: block;
+
+    & .price {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 85.69%;
+      letter-spacing: -0.015em;
+      color: #383838;
+    }
+  }
+}
+
+// .card_list {
+//   margin-bottom: 55px;
+// }
+
+.prodact_card {
+  position: relative;
+  border: 1px solid #d0cfcf;
+
+  & .delet_btn {
+    position: absolute;
+    width: 16px;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .prod_face {
+    display: inline-block;
+    margin-left: 14px;
+  }
+
+  .prodact_card {
+    height: 238px;
+  }
+}
+
+.prod_img {
+  width: 141px;
+  height: 106px;
+  position: relative;
+  // margin-left: auto;
+  // margin-right: auto;
+  display: inline-block;
+
+  & img {
+    // width: 100%;
+    height: 100%;
+  }
+
+  .skidka_on {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 27px;
+    background-color: #ec1e22;
+    color: #fff;
+
+    &.show {
+      display: flex;
+    }
+  }
+}
+
+// .title_card {
+//   max-width: 228px;
+// }
+
+.code {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 85.69%;
+
+  &.article {
+    margin-bottom: 6px;
+  }
+
+  &.skidka {
+    margin-bottom: 23px;
+  }
+}
+
+// @media screen and (min-width: 768px) {
+//   .prod_item {
+//     margin-bottom: -1px;
+//   }
+// }
+
+.prod_name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 110%;
+  margin: 0;
+  margin-bottom: 9px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.prod_count_btn {
+  display: inline-flex;
+  width: 100px;
+  height: 35px;
+
+  background: #ffffff;
+  border: 1px solid #383838;
+  border-radius: 3px;
+
+  margin: 0;
+
+  &.disabled {
+    border: 1px solid #d0cfcf;
+  }
+
+  .btn-count {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 100%;
+    color: #d0cfcf;
+  }
+
+  &.disabled > .btn-count {
+    color: #d0cfcf;
+    cursor: default;
+  }
+
+  & .minus {
+    font-size: 18px;
+    line-height: 85.69%;
+    font-weight: 900;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 70%;
+      border-right: 1px solid #383838;
+    }
+  }
+
+  & .plus {
+    font-size: 18px;
+    line-height: 85.69%;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 70%;
+      border-left: 1px solid #383838;
+    }
+  }
+
+  & .count {
+    font-family: 'Graphik LCG';
+    width: 33%;
+    height: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 85.69%;
+    color: #383838;
+  }
+
+  &.disabled > .minus,
+  &.disabled > .plus {
+    cursor: default;
+    &::after {
+      border: 1px solid #d0cfcf;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .prod_count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prod_count_btn {
+    width: 94px;
+    height: 40px;
+  }
+}
+
+.price_area {
+  min-width: 100px;
+  height: 35px;
+  text-align: center;
+  position: relative;
+
+  & .price {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 85.69%;
+    letter-spacing: -0.015em;
+    color: #383838;
+  }
+}
+
+.old_price {
+  // width: calc(100% + 11%);
+  position: absolute;
+  left: 24%;
+  top: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #d0cfcf;
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 1319px) {
+  .price_area {
+    height: inherit;
+
+    & .price {
+      font-size: 22px;
+    }
+  }
+
+  .old_price {
+    // width: calc(100% + 11%);
+    position: absolute;
+    font-size: 20px;
+
+    left: 33px;
+    top: 30px;
+  }
+
+  .prod_count_btn {
+    width: 110px;
+    height: 44px;
+  }
+}
+
+.centre {
+  text-align: center;
+}
+
+.promocode {
+  &_text {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  &_input {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #d0cfcf;
+    border-radius: 1px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 85.69%;
+
+    text-align: center;
+    letter-spacing: -0.015em;
+
+    color: #383838;
+    margin-bottom: 13px;
+
+    &:focus {
+      background: rgba(236, 30, 34, 0.04);
+      border: 1px solid #ec1e22;
+    }
+  }
+
+  &_input.error {
+    background: rgba(236, 30, 34, 0.04);
+    outline: 1px solid #ec1e22;
+    border-radius: 1px;
+  }
+
+  &_button {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #ec1e22;
+    border-radius: 1px;
+    background-color: #fff;
+
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 45px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+
+      background-color: #ec1e22;
+    }
+  }
+}
+
+.final_price {
+  position: relative;
+
+  & .old_price {
+    left: 88px;
+    top: 30px;
+    font-size: 26px;
+    line-height: 85.69%;
+  }
+
+  & .price {
+    margin: 0 0 54px 0;
+    font-weight: 700;
+    font-size: 26px;
+  }
+}
+
+.centre {
+  & .checkout {
+    width: 288px;
+    height: 42px;
+    background-color: #ec1e22;
+    border: none;
+    border-radius: 1px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.prod_number {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .prod_order {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+  }
+
+  .market_icons {
+    display: none;
+  }
+
+  .centre {
+    text-align: right;
+
+    & .checkout {
+      width: 224px;
+      height: 48px;
+    }
+  }
+
+  // .promocode_block {
+  //   display: inline-block;
+  // }
+
+  .promocode_input {
+    width: 185px;
+    height: 42px;
+    text-align: left;
+    padding: 14px;
+    margin: 0;
+    margin-right: 22px;
+  }
+
+  .promocode_button {
+    margin: 0;
+
+    width: 156px;
+    height: 42px;
+  }
+
+  .prod_number {
+    display: block;
+    margin: 0 0 23px 0;
+    text-align: right;
+  }
+
+  .final_price {
+    text-align: right;
+
+    & .old_price {
+      left: 37%;
+      font-size: 26px;
+      line-height: 85.69%;
+      top: 70px;
+    }
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .prod_face {
+    display: flex;
+    align-items: center;
+  }
+
+  .final_price {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .prod_number {
+    margin-right: 42px;
+  }
+
+  .final_price {
+    & .old_price {
+      left: 279px;
+      font-size: 26px;
+      line-height: 85.69%;
+      top: 30px;
+    }
+  }
+
+  .tab_skidka,
+  .tab_prod_price {
+    & .price {
+      font-size: 22px;
+    }
+  }
+
+  .prod_img {
+    width: 248px;
+    height: 186px;
+  }
+
+  .table_col_1 {
+    width: 672px;
+  }
+}
+
+.prod_order_js.hide {
+  display: none;
+}

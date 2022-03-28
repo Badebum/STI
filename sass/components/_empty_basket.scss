@@ -1,0 +1,36 @@
+.catalog_btn {
+  width: 218px;
+  height: 42px;
+
+  padding: 12px 60px;
+  border: 1px solid #ec1e22;
+  border-radius: 1px;
+  background-color: unset;
+  font-size: 16px;
+  line-height: 85.69%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: #ec1e22;
+  }
+}
+
+.order_ok {
+  & .text {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .catalog_btn {
+    width: 224px;
+    height: 48px;
+    font-size: 18px;
+    padding: 14px 60px;
+  }
+}
