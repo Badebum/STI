@@ -29,20 +29,6 @@
               <div class="menu_item_mobl">
                 <p href="" class="main_menu_mobl arrow link">Каталог</p>
               </div>
-
-              <div class="sub_menu_mobl">
-                <ul class="sub_list list">
-                  <li class="sub_list_item">
-                    <a class="main_menu_mobl sub_link link" href=""> Анестезия </a>
-                  </li>
-                  <li class="sub_list_item">
-                    <a class="main_menu_mobl sub_link link" href=""> Реставрация </a>
-                  </li>
-                  <li class="sub_list_item">
-                    <a class="main_menu_mobl sub_link link" href=""> Отбеливание зубов </a>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li>
               <div class="menu_item_mobl">
@@ -68,7 +54,9 @@
           <div>
             <ul class="addres_header_mobl list">
               <li class="list_link_item">
-                <a href="" class="link addres_link_text">125130, г. Москва, ул. Выборгская, д. 22, стр.2</a>
+                <a href="javascript:void(0)" class="link addres_link_text"
+                  >125130, г. Москва, ул. Выборгская, д. 22, стр.2</a
+                >
               </li>
               <li class="list_link_item">
                 <p class="addres_link_text">График работы: ПН-ПТ с 9:00 до 18:00</p>
@@ -76,20 +64,28 @@
             </ul>
             <ul class="header_icon_svg">
               <li class="market_icon_item list">
-                <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="" />
-                <span class="red_notification active">4</span>
+                <a href="javascript:void(0)" class="link">
+                  <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="корзина" />
+                  <span class="red_notification active">4</span>
+                </a>
               </li>
               <li class="market_icon_item list">
-                <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="" />
-                <span class="red_notification"></span>
+                <a href="javascript:void(0)" class="link">
+                  <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="сравнение" />
+                  <span class="red_notification"></span>
+                </a>
               </li>
               <li class="market_icon_item list">
-                <img src="./img/svg/heart.svg" class="menu_icon_item" alt="" />
-                <span class="red_notification"></span>
+                <a href="javascript:void(0)" class="link">
+                  <img src="./img/svg/heart.svg" class="menu_icon_item" alt="избранное" />
+                  <span class="red_notification"></span>
+                </a>
               </li>
               <li class="market_icon_item list">
-                <img src="./img/svg/chel.svg" class="menu_icon_item" alt="" />
-                <span class="red_notification"></span>
+                <a href="" class="link">
+                  <img src="./img/svg/chel.svg" class="menu_icon_item" alt="личный кабинет" />
+                  <span class="red_notification"></span>
+                </a>
               </li>
             </ul>
           </div>
@@ -175,20 +171,28 @@
               <div>
                 <ul class="header_icon_svg">
                   <li class="market_icon_item list basket-js">
-                    <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="" />
-                    <span class="red_notification active">4</span>
+                    <a href="javascript:void(0)" class="link">
+                      <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="корзина" />
+                      <span class="red_notification active">4</span>
+                    </a>
                   </li>
                   <li class="market_icon_item list">
-                    <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="" />
-                    <span class="red_notification"></span>
+                    <a href="javascript:void(0)" class="link">
+                      <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="сравнение" />
+                      <span class="red_notification"></span>
+                    </a>
                   </li>
                   <li class="market_icon_item list">
-                    <img src="./img/svg/heart.svg" class="menu_icon_item" alt="" />
-                    <span class="red_notification"></span>
+                    <a href="javascript:void(0)" class="link">
+                      <img src="./img/svg/heart.svg" class="menu_icon_item" alt="избранное" />
+                      <span class="red_notification"></span>
+                    </a>
                   </li>
                   <li class="market_icon_item list">
-                    <img src="./img/svg/chel.svg" class="menu_icon_item" alt="" />
-                    <span class="red_notification"></span>
+                    <a href="" class="link">
+                      <img src="./img/svg/chel.svg" class="menu_icon_item" alt="личный кабинет" />
+                      <span class="red_notification"></span>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -198,117 +202,173 @@
       </div>
     </header>
 
-    <section class="basket container">
-      <p class="breadcrumbs">Главная - Корзина</p>
-      <h1 class="titel_page">Корзина</h1>
-      <p>Готовы к заказу (<span>4</span>)</p>
+    <section class="basket">
+      <div class="container">
+        <p class="breadcrumbs">Главная - Корзина</p>
+        <h1 class="titel_page">Корзина</h1>
+        <p>Готовы к заказу (<span>4</span>)</p>
 
-      <div class="btn_print_clean">
-        <button type="button" class="print_btn">
-          <div class="print_icon"></div>
-          Распечатать
-        </button>
-        <button type="button" class="print_btn">
-          <div class="clean_icon"></div>
+        <div class="prod-action">
+          <button type="button" class="print_btn">
+            <div class="print_icon"></div>
+            Распечатать
+          </button>
+          <button type="button" class="clean_btn">
+            <div class="clean_icon"></div>
+            Очистить
+          </button>
+        </div>
 
-          Очистить
-        </button>
-      </div>
+        <!-- <table class="tabl_col">
+          <thead>
+            <tr class="tabl_name">
+              <th class="col_name">Товар</th>
+              <th class="col_name">Скидка</th>
+              <th class="col_name">Цена</th>
+              <th class="col_name">Количество</th>
+              <th class="col_name">Итого</th>
+            </tr>
+            <tr class="prodact_card">
+              <td class="card_face table_col_1">
+                <div class="prod_face">
+                  <div class="prod_img">
+                    <img src="./img/basket/img_card.jpg" alt="" />
+                    <span class="skidka_on show">-26%</span>
+                  </div>
+                  <div class="title_card">
+                    <h2 class="prod_name">Meliodent HC, 1kg, 42 - розовый c прожилками</h2>
+                    <span class="code article">Артикул MK64713251</span>
+                    <span class="code skidka">Скидка 0%</span>
+                  </div>
+                </div>
+              </td>
+              <td class="table_col_2 td_none">
+                <div class="tab_skidka">
+                  <span class="price">0%</span>
+                </div>
+              </td>
+              <td class="table_col_3 td_none">
+                <div class="tab_prod_price">
+                  <span class="price">3 460 руб.</span>
+                </div>
+              </td>
+              <td class="table_col_4 mobl_count_btn">
+                <div class="prod_count">
+                  <div class="prod_count_btn">
+                    <span class="btn-count minus">-</span>
+                    <div class="btn-count count">1</div>
+                    <span class="btn-count plus">+</span>
+                  </div>
+                </div>
+              </td>
+              <td class="table_col_5 mobl_price_area">
+                <div class="prod_price">
+                  <div class="price_area">
+                    <span class="price"> <span class="price_js">3 460</span> руб. </span>
+                    <span class="old_price">8 144 руб.</span>
+                  </div>
+                </div>
+              </td>
+              <td class="delet_btn">
+                <img src="./img/svg/del_cross.svg" alt="удалить товар" />
+              </td>
+            </tr>
+          </thead>
+        </table> -->
 
-      <table class="tabl_col">
-        <thead>
-          <tr class="tabl_name">
-            <th class="col_name table_col_1">Товар</th>
-            <th class="col_name table_col_2">Скидка</th>
-            <th class="col_name table_col_3">Цена</th>
-            <th class="col_name table_col_4">Количество</th>
-            <th class="col_name table_col_5">Итого</th>
-          </tr>
-          <tr class="prodact_card">
-            <td class="card_face table_col_1">
-              <div class="prod_face">
-                <div class="prod_img">
-                  <img src="./img/basket/img_card.jpg" alt="" />
-                  <span class="skidka_on show">-26%</span>
+        <div class="prodacts-selected">
+          <div class="prodacts-options">
+            <div class="prodacts-options_name">
+              <span>Товар</span>
+            </div>
+            <div class="prodacts-options_sale">
+              <span>Скидка</span>
+            </div>
+            <div class="prodacts-options_price">
+              <span>Цена</span>
+            </div>
+            <div class="prodacts-options_quantity">
+              <span>Количество</span>
+            </div>
+            <div class="prodacts-options_amount">
+              <span>Итого</span>
+            </div>
+          </div>
+          <div class="cart-product__wrap">
+            <div class="cart-product">
+              <div class="card-prodact-info">
+                <div class="card-image">
+                  <img src="./img/basket/img_card.jpg" alt="картинка товара" class="card__img" />
+                  <!-- <span class="skidka_on show">-26%</span> -->
                 </div>
-                <div class="title_card">
-                  <h2 class="prod_name">Meliodent HC, 1kg, 42 - розовый c прожилками</h2>
-                  <span class="code article">Артикул MK64713251</span>
-                  <span class="code skidka">Скидка 0%</span>
-                </div>
-              </div>
-            </td>
-            <td class="table_col_2 td_none">
-              <div class="tab_skidka">
-                <span class="price">0%</span>
-              </div>
-            </td>
-            <td class="table_col_3 td_none">
-              <div class="tab_prod_price">
-                <span class="price">3 460 руб.</span>
-              </div>
-            </td>
-            <td class="table_col_4 mobl_count_btn">
-              <div class="prod_count">
-                <div class="prod_count_btn">
-                  <span class="btn-count minus">-</span>
-                  <div class="btn-count count">1</div>
-                  <span class="btn-count plus">+</span>
+                <div class="card-description">
+                  <div class="card__name">
+                    <p>Meliodent HC, 1kg, 42 - розовый c прожилками</p>
+                    <span>Артикул MK64713251</span>
+                  </div>
+                  <div class="card__sale">
+                    <span>0%</span>
+                  </div>
+                  <div class="card__price">
+                    <span>3 460 руб</span>
+                  </div>
                 </div>
               </div>
-            </td>
-            <td class="table_col_5 mobl_price_area">
-              <div class="prod_price">
+              <div class="card-prodact-amount">
+                <div class="prod_count">
+                  <div class="prod_count_btn">
+                    <span class="btn-count minus">-</span>
+                    <div class="btn-count count">1</div>
+                    <span class="btn-count plus">+</span>
+                  </div>
+                </div>
                 <div class="price_area">
-                  <span class="price"> <span class="price_js">3 460</span> руб. </span>
-                  <span class="old_price">8 144 руб.</span>
+                  <span class="price"> <span>3 460</span> руб. </span>
+                  <!-- <span class="old_price">8 144 руб.</span> -->
                 </div>
               </div>
-            </td>
-            <td class="delet_btn">
-              <img src="./img/svg/del_cross.svg" alt="удалить товар" />
-            </td>
-          </tr>
-        </thead>
-      </table>
+            </div>
+          </div>
+        </div>
 
-      <div class="prod_order prod_order_js">
-        <div class="promocode_block">
-          <p class="promocode_text">Введите промокод:</p>
-          <div class="centre">
-            <input class="promocode_input" type="text" placeholder="Промокод" />
-            <button type="button" class="promocode_button">Применить</button>
+        <div class="prod_order">
+          <div class="promocode_block">
+            <p class="promocode_text">Введите промокод:</p>
+            <div class="centre">
+              <input class="promocode_input" type="text" placeholder="Промокод" />
+              <button type="button" class="promocode_button">Применить</button>
+            </div>
           </div>
-        </div>
-        <div class="tab_final_price">
-          <div class="final_price">
-            <p class="prod_number">В корзине <span>4</span> товара</p>
-            <p class="price">Итого: <span>17 182 руб.</span></p>
-            <span class="old_price">18 328 руб.</span>
+          <div class="tab_final_price">
+            <div class="final_price">
+              <p class="prod_number">В корзине <span>4</span> товара</p>
+              <p class="price">Итого: <span>17 182 руб.</span></p>
+              <span class="old_price">18 328 руб.</span>
+            </div>
+            <div class="centre">
+              <button type="button" class="checkout checkout_js">Оформить заказ</button>
+            </div>
           </div>
-          <div class="centre">
-            <button type="button" class="checkout checkout_js">Оформить заказ</button>
+          <div class="market_icons">
+            <ul class="header_icon_svg">
+              <li class="market_icon_item list">
+                <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="" />
+                <span class="red_notification active">4</span>
+              </li>
+              <li class="market_icon_item list">
+                <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="" />
+                <span class="red_notification"></span>
+              </li>
+              <li class="market_icon_item list">
+                <img src="./img/svg/heart.svg" class="menu_icon_item" alt="" />
+                <span class="red_notification"></span>
+              </li>
+              <li class="market_icon_item list">
+                <img src="./img/svg/chel.svg" class="menu_icon_item" alt="" />
+                <span class="red_notification"></span>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="market_icons">
-          <ul class="header_icon_svg">
-            <li class="market_icon_item list">
-              <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="" />
-              <span class="red_notification active">4</span>
-            </li>
-            <li class="market_icon_item list">
-              <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="" />
-              <span class="red_notification"></span>
-            </li>
-            <li class="market_icon_item list">
-              <img src="./img/svg/heart.svg" class="menu_icon_item" alt="" />
-              <span class="red_notification"></span>
-            </li>
-            <li class="market_icon_item list">
-              <img src="./img/svg/chel.svg" class="menu_icon_item" alt="" />
-              <span class="red_notification"></span>
-            </li>
-          </ul>
         </div>
       </div>
     </section>

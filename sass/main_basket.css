@@ -748,22 +748,106 @@ header {
   display: none;
 }
 
-.btn_print_clean {
+.prod-action {
   display: none;
 }
 
+.prodacts-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  border: 1px solid #d0cfcf;
+  font-family: 'PT Sans Caption';
+  font-size: 18px;
+  line-height: 85.69%;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #383838;
+}
+
+.prodacts-options_name {
+  width: 672px;
+  border-right: 1px solid #d0cfcf;
+  padding: 12px 33px;
+}
+
+.prodacts-options_sale {
+  width: 120px;
+  border-right: 1px solid #d0cfcf;
+  padding: 12px 33px;
+}
+
+.prodacts-options_price {
+  width: 172px;
+  border-right: 1px solid #d0cfcf;
+  padding: 12px 33px;
+}
+
+.prodacts-options_quantity {
+  width: 175px;
+  border-right: 1px solid #d0cfcf;
+  padding: 12px 33px;
+}
+
+.prodacts-options_amount {
+  width: 175px;
+  padding: 12px 33px;
+}
+
+.cart-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #d0cfcf;
+}
+
+.card-image {
+  width: 248px;
+  height: 186px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-image .card__img {
+  max-width: 248px;
+  max-height: 186px;
+}
+
+.card-prodact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-description .card__sale {
+  width: 120px;
+}
+
+.card-description .card__price {
+  width: 172px;
+}
+
+.card-prodact-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (max-width: 767px) {
-  .tabl_col {
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: separate;
-    border-spacing: 0 24px;
-    width: 100%;
-  }
-  .tabl_name,
-  .td_none {
-    display: none;
-  }
   .mobl_count_btn {
     position: absolute;
     left: 14px;
@@ -774,33 +858,9 @@ header {
     right: 14px;
     bottom: 16px;
   }
-  .card_face {
-    border: 1px solid #d0cfcf;
-    min-width: 288px;
-    height: 300px;
-    padding: 14px;
-  }
-  .card_face .delet_btn {
-    position: absolute;
-    width: 16px;
-    top: 14px;
-    right: 14px;
-    cursor: pointer;
-  }
-  .prodact_card {
-    margin-bottom: 24px;
-  }
   .price_area .old_price {
     left: 6%;
   }
-  .prod_name {
-    width: 250px;
-  }
-}
-
-.tab_skidka,
-.tab_prod_price {
-  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -813,10 +873,7 @@ header {
     opacity: 0.5;
     margin: 36px 0 34px 0;
   }
-  .code.skidka {
-    display: none;
-  }
-  .btn_print_clean {
+  .prod-action {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -825,7 +882,8 @@ header {
             justify-content: flex-end;
     margin-bottom: 16px;
   }
-  .btn_print_clean .print_btn {
+  .prod-action .print_btn,
+  .prod-action .clean_btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -846,36 +904,44 @@ header {
     color: #383838;
     cursor: pointer;
   }
-  .btn_print_clean .print_btn:not(:last-child) {
+  .prod-action .print_btn:not(:last-child),
+  .prod-action .clean_btn:not(:last-child) {
     margin-right: 18px;
   }
-  .btn_print_clean .print_btn:hover, .btn_print_clean .print_btn:focus {
+  .prod-action .print_btn:hover, .prod-action .print_btn:focus,
+  .prod-action .clean_btn:hover,
+  .prod-action .clean_btn:focus {
     color: #ec1e22;
     border: 1px solid #ec1e22;
   }
-  .btn_print_clean .print_btn:active {
+  .prod-action .print_btn:active,
+  .prod-action .clean_btn:active {
     background-color: #ec1e22;
     color: #fff;
   }
-  .btn_print_clean .print_btn:hover > .print_icon {
+  .prod-action .print_btn:hover > .print_icon,
+  .prod-action .clean_btn:hover > .print_icon {
     background-image: url(../img/svg/ptint_red.svg);
   }
-  .btn_print_clean .print_btn:active > .print_icon {
+  .prod-action .print_btn:active > .print_icon,
+  .prod-action .clean_btn:active > .print_icon {
     background-image: url(../img/svg/print_white.svg);
   }
-  .btn_print_clean .print_btn:hover > .clean_icon {
+  .prod-action .print_btn:hover > .clean_icon,
+  .prod-action .clean_btn:hover > .clean_icon {
     background-image: url(../img/svg/cross_red.svg);
   }
-  .btn_print_clean .print_btn:active > .clean_icon {
+  .prod-action .print_btn:active > .clean_icon,
+  .prod-action .clean_btn:active > .clean_icon {
     background-image: url(../img/svg/cross_white.svg);
   }
-  .btn_print_clean .print_icon {
+  .prod-action .print_icon {
     width: 22px;
     height: 22px;
     background-image: url(../img/svg/print.svg);
     margin-right: 16px;
   }
-  .btn_print_clean .clean_icon {
+  .prod-action .clean_icon {
     width: 18px;
     height: 18px;
     background-image: url(../img/svg/cross_black.svg);
@@ -883,134 +949,6 @@ header {
     background-size: cover;
     margin-right: 16px;
   }
-  .tabl_col {
-    display: table;
-    border-collapse: collapse;
-    height: 38px;
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  .tabl_col .col_name {
-    border: 1px solid #d0cfcf;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 85.69%;
-    text-align: center;
-    letter-spacing: -0.015em;
-    color: #383838;
-    padding: 12px 0;
-  }
-  .table_col_1 {
-    min-width: 228px;
-  }
-  .table_col_2 {
-    width: 130px;
-  }
-  .table_col_3 {
-    width: 172px;
-  }
-  .table_col_4 {
-    width: 175px;
-  }
-  .table_col_5 {
-    width: 172px;
-  }
-  .tab_skidka,
-  .tab_prod_price {
-    display: block;
-  }
-  .tab_skidka .price,
-  .tab_prod_price .price {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 85.69%;
-    letter-spacing: -0.015em;
-    color: #383838;
-  }
-}
-
-.prodact_card {
-  position: relative;
-  border: 1px solid #d0cfcf;
-}
-
-.prodact_card .delet_btn {
-  position: absolute;
-  width: 16px;
-  top: 14px;
-  right: 14px;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  .prod_face {
-    display: inline-block;
-    margin-left: 14px;
-  }
-  .prodact_card {
-    height: 238px;
-  }
-}
-
-.prod_img {
-  width: 141px;
-  height: 106px;
-  position: relative;
-  display: inline-block;
-}
-
-.prod_img img {
-  height: 100%;
-}
-
-.prod_img .skidka_on {
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55px;
-  height: 27px;
-  background-color: #ec1e22;
-  color: #fff;
-}
-
-.prod_img .skidka_on.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.code {
-  display: block;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 85.69%;
-}
-
-.code.article {
-  margin-bottom: 6px;
-}
-
-.code.skidka {
-  margin-bottom: 23px;
-}
-
-.prod_name {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 110%;
-  margin: 0;
-  margin-bottom: 9px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
 }
 
 .prod_count_btn {
@@ -1304,14 +1242,6 @@ header {
 }
 
 @media screen and (min-width: 1320px) {
-  .prod_face {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .promocode_input {
     width: 312px;
     height: 48px;
@@ -1337,21 +1267,6 @@ header {
     line-height: 85.69%;
     top: 30px;
   }
-  .tab_skidka .price,
-  .tab_prod_price .price {
-    font-size: 22px;
-  }
-  .prod_img {
-    width: 248px;
-    height: 186px;
-  }
-  .table_col_1 {
-    width: 672px;
-  }
-}
-
-.prod_order_js.hide {
-  display: none;
 }
 
 .br.on {
@@ -1365,14 +1280,6 @@ header {
   line-height: 85.69%;
   letter-spacing: -0.015em;
   color: #383838;
-}
-
-.order {
-  display: none;
-}
-
-.order.is-open {
-  display: block;
 }
 
 .buyer_block {
