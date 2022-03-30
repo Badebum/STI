@@ -219,63 +219,6 @@
           </button>
         </div>
 
-        <!-- <table class="tabl_col">
-          <thead>
-            <tr class="tabl_name">
-              <th class="col_name">Товар</th>
-              <th class="col_name">Скидка</th>
-              <th class="col_name">Цена</th>
-              <th class="col_name">Количество</th>
-              <th class="col_name">Итого</th>
-            </tr>
-            <tr class="prodact_card">
-              <td class="card_face table_col_1">
-                <div class="prod_face">
-                  <div class="prod_img">
-                    <img src="./img/basket/img_card.jpg" alt="" />
-                    <span class="skidka_on show">-26%</span>
-                  </div>
-                  <div class="title_card">
-                    <h2 class="prod_name">Meliodent HC, 1kg, 42 - розовый c прожилками</h2>
-                    <span class="code article">Артикул MK64713251</span>
-                    <span class="code skidka">Скидка 0%</span>
-                  </div>
-                </div>
-              </td>
-              <td class="table_col_2 td_none">
-                <div class="tab_skidka">
-                  <span class="price">0%</span>
-                </div>
-              </td>
-              <td class="table_col_3 td_none">
-                <div class="tab_prod_price">
-                  <span class="price">3 460 руб.</span>
-                </div>
-              </td>
-              <td class="table_col_4 mobl_count_btn">
-                <div class="prod_count">
-                  <div class="prod_count_btn">
-                    <span class="btn-count minus">-</span>
-                    <div class="btn-count count">1</div>
-                    <span class="btn-count plus">+</span>
-                  </div>
-                </div>
-              </td>
-              <td class="table_col_5 mobl_price_area">
-                <div class="prod_price">
-                  <div class="price_area">
-                    <span class="price"> <span class="price_js">3 460</span> руб. </span>
-                    <span class="old_price">8 144 руб.</span>
-                  </div>
-                </div>
-              </td>
-              <td class="delet_btn">
-                <img src="./img/svg/del_cross.svg" alt="удалить товар" />
-              </td>
-            </tr>
-          </thead>
-        </table> -->
-
         <div class="prodacts-selected">
           <div class="prodacts-options">
             <div class="prodacts-options_name">
@@ -298,18 +241,20 @@
             <div class="cart-product">
               <div class="card-prodact-info">
                 <div class="card-image">
-                  <img src="./img/basket/img_card.jpg" alt="картинка товара" class="card__img" />
+                  <picture>
+                    <img src="./img/basket/img_card.jpg" alt="картинка товара" class="card__img" />
+                  </picture>
                   <!-- <span class="skidka_on show">-26%</span> -->
                 </div>
                 <div class="card-description">
                   <div class="card__name">
-                    <p>Meliodent HC, 1kg, 42 - розовый c прожилками</p>
+                    <p class="self_name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
                     <span>Артикул MK64713251</span>
                   </div>
-                  <div class="card__sale">
+                  <div class="card__sale to__centre_flex">
                     <span>0%</span>
                   </div>
-                  <div class="card__price">
+                  <div class="card__price to__centre_flex">
                     <span>3 460 руб</span>
                   </div>
                 </div>
@@ -322,7 +267,7 @@
                     <span class="btn-count plus">+</span>
                   </div>
                 </div>
-                <div class="price_area">
+                <div class="price_area to__centre_flex">
                   <span class="price"> <span>3 460</span> руб. </span>
                   <!-- <span class="old_price">8 144 руб.</span> -->
                 </div>

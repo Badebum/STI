@@ -827,18 +827,60 @@ header {
   display: flex;
 }
 
+.to__centre_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .card-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.card-description .card__name {
+  width: 337px;
+}
+
+.card-description .card__name span {
+  font-size: 18px;
+  line-height: 85.69%;
+}
+
+.card-description .self_name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 110%;
+  letter-spacing: -0.015em;
+}
+
 .card-description .card__sale {
-  width: 120px;
+  width: 160px;
+}
+
+.card-description .card__sale span {
+  font-size: 22px;
+  line-height: 85.69%;
+  text-align: center;
+  letter-spacing: -0.015em;
 }
 
 .card-description .card__price {
-  width: 172px;
+  width: 199px;
+}
+
+.card-description .card__price span {
+  font-size: 22px;
+  line-height: 85.69%;
+  text-align: center;
+  letter-spacing: -0.015em;
 }
 
 .card-prodact-amount {
@@ -1054,6 +1096,7 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 202px;
   }
   .prod_count_btn {
     width: 94px;
@@ -1062,7 +1105,7 @@ header {
 }
 
 .price_area {
-  min-width: 100px;
+  width: 201px;
   height: 35px;
   text-align: center;
   position: relative;

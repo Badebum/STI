@@ -79,15 +79,53 @@
   display: flex;
 }
 
+.to__centre_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-description {
   display: flex;
 
+  & .card__name {
+    width: 337px;
+
+    & span {
+      font-size: 18px;
+      line-height: 85.69%;
+    }
+  }
+
+  & .self_name {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 110%;
+    letter-spacing: -0.015em;
+  }
+
   & .card__sale {
-    width: 120px;
+    width: 160px;
+
+    & span {
+      font-size: 22px;
+      line-height: 85.69%;
+
+      text-align: center;
+      letter-spacing: -0.015em;
+    }
   }
 
   & .card__price {
-    width: 172px;
+    width: 199px;
+
+    & span {
+      font-size: 22px;
+      line-height: 85.69%;
+
+      text-align: center;
+      letter-spacing: -0.015em;
+    }
   }
 }
 
@@ -301,6 +339,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 202px;
   }
 
   .prod_count_btn {
@@ -310,7 +349,7 @@
 }
 
 .price_area {
-  min-width: 100px;
+  width: 201px;
   height: 35px;
   text-align: center;
   position: relative;
