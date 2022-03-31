@@ -796,6 +796,8 @@ header {
 }
 
 .cart-product {
+  width: 100%;
+  height: 238px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -803,7 +805,7 @@ header {
 }
 
 .card-image {
-  width: 248px;
+  width: 26%;
   height: 186px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -822,12 +824,13 @@ header {
 }
 
 .card-prodact-info {
+  width: 72%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.to__centre_flex {
+.centre_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -840,13 +843,14 @@ header {
 }
 
 .card-description {
+  width: 74%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .card-description .card__name {
-  width: 337px;
+  width: 48%;
 }
 
 .card-description .card__name span {
@@ -859,10 +863,14 @@ header {
   font-size: 22px;
   line-height: 110%;
   letter-spacing: -0.015em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .card-description .card__sale {
-  width: 160px;
+  width: 23%;
 }
 
 .card-description .card__sale span {
@@ -873,7 +881,7 @@ header {
 }
 
 .card-description .card__price {
-  width: 199px;
+  width: 29%;
 }
 
 .card-description .card__price span {
@@ -884,6 +892,7 @@ header {
 }
 
 .card-prodact-amount {
+  width: 28%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1096,7 +1105,7 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 202px;
+    width: 50%;
   }
   .prod_count_btn {
     width: 94px;
@@ -1105,8 +1114,8 @@ header {
 }
 
 .price_area {
-  width: 201px;
-  height: 35px;
+  width: 50%;
+  height: 100%;
   text-align: center;
   position: relative;
 }
@@ -1248,20 +1257,18 @@ header {
   .market_icons {
     display: none;
   }
+  .promocode_input {
+    width: 185px;
+    height: 42px;
+    text-align: left;
+    border: 1px solid #d0cfcf;
+  }
   .centre {
     text-align: right;
   }
   .centre .checkout {
     width: 224px;
     height: 48px;
-  }
-  .promocode_input {
-    width: 185px;
-    height: 42px;
-    text-align: left;
-    padding: 14px;
-    margin: 0;
-    margin-right: 22px;
   }
   .promocode_button {
     margin: 0;
@@ -1285,14 +1292,6 @@ header {
 }
 
 @media screen and (min-width: 1320px) {
-  .promocode_input {
-    width: 312px;
-    height: 48px;
-    text-align: left;
-    padding: 14px;
-    margin: 0;
-    margin-right: 22px;
-  }
   .final_price {
     display: -webkit-box;
     display: -ms-flexbox;
