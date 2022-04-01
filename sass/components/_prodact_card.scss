@@ -514,6 +514,7 @@
     height: 42px;
     text-align: left;
     border: 1px solid #d0cfcf;
+    margin-right: 22px;
   }
 
   .centre {
@@ -551,6 +552,19 @@
 }
 
 @media screen and (min-width: 1320px) {
+  .promocode_input {
+    width: 312px;
+    height: 48px;
+    margin-right: 24px;
+  }
+
+  .promocode_button {
+    margin: 0;
+
+    width: 200px;
+    height: 48px;
+  }
+
   .final_price {
     display: flex;
     align-items: baseline;
