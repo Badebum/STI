@@ -8,7 +8,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 85.69%;
+  line-height: 22px;
 
   letter-spacing: -0.015em;
   color: #383838;
@@ -17,7 +17,6 @@ body {
 .buyer_block {
   font-weight: 400;
   font-size: 14px;
-  line-height: 110%;
 }
 
 .data_buyer_type {
@@ -109,7 +108,7 @@ body {
   display: block;
   font-weight: 400;
   font-size: 16px;
-  line-height: 85.69%;
+  line-height: 14px;
   letter-spacing: -0.015em;
   margin-bottom: 10px;
 }
@@ -169,7 +168,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 85.69%;
+    line-height: 15px;
 
     letter-spacing: -0.015em;
     margin: 0;
@@ -180,9 +179,7 @@ body {
     margin: 0;
     font-weight: 400;
     font-size: 14px;
-    line-height: 120%;
-    /* or 17px */
-
+    line-height: 17px;
     letter-spacing: -0.015em;
   }
 
@@ -205,7 +202,7 @@ body {
   & .count {
     font-weight: 400;
     font-size: 16px;
-    line-height: 85.69%;
+    line-height: 15px;
 
     letter-spacing: -0.015em;
     margin: 0;
@@ -241,7 +238,7 @@ body {
 
   & .polici {
     font-size: 12px;
-    line-height: 110%;
+    line-height: 13px;
 
     color: #383838;
 
@@ -259,7 +256,7 @@ body {
   position: relative;
 
   margin-right: 0;
-  line-height: 18px;
+  line-height: 13px;
   user-select: none;
 }
 
@@ -293,7 +290,9 @@ body {
     & .final_price {
       min-width: 720px;
       height: 140px;
-      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     & .price {
@@ -306,9 +305,6 @@ body {
       left: 257px;
     }
 
-    & .centre {
-      text-align: left;
-    }
     // конечная кнопка заказа
 
     & .checkout.disabled {
@@ -337,7 +333,7 @@ body {
     padding: 0 26px;
     & .polici {
       font-size: 14px;
-      line-height: 120%;
+      line-height: 17px;
     }
   }
 }
@@ -350,9 +346,6 @@ body {
 
   .our_order {
     margin-bottom: 100px;
-    & .final_price {
-      display: block;
-    }
 
     & .checkout {
       width: 224px;
