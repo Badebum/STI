@@ -14,6 +14,7 @@
 }
 
 .prodacts-options {
+  width: 100%;
   display: flex;
   text-align: center;
   border: 1px solid #d0cfcf;
@@ -65,7 +66,7 @@
 }
 
 .card-image {
-  // width: 248px;
+  max-width: 248px;
   width: 26%;
   height: 186px;
   display: flex;
@@ -94,7 +95,7 @@
   display: flex;
 
   & .card__name {
-    // width: 337px;
+    max-width: 337px;
     width: 48%;
 
     & span {
@@ -116,7 +117,7 @@
   }
 
   & .card__sale {
-    // width: 160px;
+    max-width: 160px;
     width: 23%;
 
     & span {
@@ -129,7 +130,7 @@
   }
 
   & .card__price {
-    // width: 199px;
+    max-width: 199px;
     width: 29%;
 
     & span {
@@ -143,7 +144,7 @@
 }
 
 .card-prodact-amount {
-  width: 28%;
+  width: 31%;
   display: flex;
 }
 

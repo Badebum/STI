@@ -539,6 +539,7 @@ header {
 }
 
 .prodacts-options {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -591,6 +592,7 @@ header {
 }
 
 .card-image {
+  max-width: 248px;
   width: 26%;
   height: 186px;
   display: -webkit-box;
@@ -636,6 +638,7 @@ header {
 }
 
 .card-description .card__name {
+  max-width: 337px;
   width: 48%;
 }
 
@@ -656,6 +659,7 @@ header {
 }
 
 .card-description .card__sale {
+  max-width: 160px;
   width: 23%;
 }
 
@@ -667,6 +671,7 @@ header {
 }
 
 .card-description .card__price {
+  max-width: 199px;
   width: 29%;
 }
 
@@ -678,7 +683,7 @@ header {
 }
 
 .card-prodact-amount {
-  width: 28%;
+  width: 31%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
