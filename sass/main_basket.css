@@ -538,6 +538,10 @@ header {
   display: none;
 }
 
+.prodacts-selected {
+  margin-bottom: 50px;
+}
+
 .prodacts-options {
   width: 100%;
   display: -webkit-box;
@@ -545,6 +549,7 @@ header {
   display: flex;
   text-align: center;
   border: 1px solid #d0cfcf;
+  margin-bottom: -1px;
   font-family: 'PT Sans Caption';
   font-size: 18px;
   line-height: 85.69%;
@@ -589,12 +594,13 @@ header {
   display: -ms-flexbox;
   display: flex;
   border: 1px solid #d0cfcf;
+  padding: 10px;
 }
 
 .card-image {
   max-width: 248px;
   width: 26%;
-  height: 186px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -612,7 +618,7 @@ header {
 }
 
 .card-prodact-info {
-  width: 72%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -630,37 +636,49 @@ header {
           align-items: center;
 }
 
-.card-description {
-  width: 74%;
+.card__name {
+  max-width: 423px;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
-.card-description .card__name {
-  max-width: 337px;
-  width: 48%;
-}
-
-.card-description .card__name span {
-  font-size: 18px;
-  line-height: 85.69%;
-}
-
-.card-description .self_name {
+.card__name .self_name {
   font-weight: 700;
   font-size: 22px;
-  line-height: 110%;
-  letter-spacing: -0.015em;
+  line-height: 24px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
 
+.card__name span {
+  font-size: 18px;
+  line-height: 15px;
+}
+
+.card-description {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .card-description .card__sale {
-  max-width: 160px;
-  width: 23%;
+  max-width: 120px;
+  width: 100%;
 }
 
 .card-description .card__sale span {
@@ -671,8 +689,8 @@ header {
 }
 
 .card-description .card__price {
-  max-width: 199px;
-  width: 29%;
+  max-width: 172px;
+  width: 100%;
 }
 
 .card-description .card__price span {
@@ -1110,6 +1128,69 @@ header {
     font-size: 26px;
     line-height: 85.69%;
     top: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .prodacts-options,
+  .card-description {
+    display: none;
+  }
+  .cart-product {
+    display: block;
+    height: 300px;
+  }
+  .card-prodact-info {
+    display: block;
+    width: 100%;
+  }
+  .card-image {
+    display: block;
+    width: 100%;
+  }
+  .card__name {
+    width: 100%;
+    display: block;
+  }
+  .card__name .self_name {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+  }
+  .card__name .article {
+    font-size: 14px;
+    line-height: 12px;
+  }
+  .card-prodact-amount {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cart-product {
+    height: 222px;
+  }
+  .card-image {
+    max-height: 106px;
+    width: 70%;
+  }
+  .card-prodact-info {
+    position: relative;
+  }
+  .card-description {
+    width: 42%;
+  }
+  .card__name {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .card__name .self_name {
+    font-size: 18px;
+    line-height: 20px;
   }
 }
 
@@ -1997,5 +2078,12 @@ template {
 
 [hidden] {
   display: none;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=main_basket.css.map */

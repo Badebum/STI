@@ -183,4 +183,10 @@ template {
   display: none;
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 // normalize //

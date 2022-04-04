@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sass/main_basket.css" />
-
     <title>Корзина</title>
   </head>
   <body>
@@ -205,117 +204,119 @@
     <section class="basket">
       <div class="container">
         <p class="breadcrumbs">Главная - Корзина</p>
-        <h1 class="titel_page">Корзина</h1>
-        <p>Готовы к заказу (<span>4</span>)</p>
+        <form>
+          <h1 class="titel_page">Корзина</h1>
+          <p>Готовы к заказу (<span>4</span>)</p>
 
-        <div class="prod-action">
-          <button type="button" class="print_btn">
-            <div class="print_icon"></div>
-            Распечатать
-          </button>
-          <button type="button" class="clean_btn">
-            <div class="clean_icon"></div>
-            Очистить
-          </button>
-        </div>
-
-        <div class="prodacts-selected">
-          <div class="prodacts-options">
-            <div class="prodacts-options_name">
-              <span>Товар</span>
-            </div>
-            <div class="prodacts-options_sale">
-              <span>Скидка</span>
-            </div>
-            <div class="prodacts-options_price">
-              <span>Цена</span>
-            </div>
-            <div class="prodacts-options_quantity">
-              <span>Количество</span>
-            </div>
-            <div class="prodacts-options_amount">
-              <span>Итого</span>
-            </div>
+          <div class="prod-action">
+            <button type="button" class="print_btn">
+              <div class="print_icon"></div>
+              Распечатать
+            </button>
+            <button type="button" class="clean_btn">
+              <div class="clean_icon"></div>
+              Очистить
+            </button>
           </div>
-          <div class="cart-product__wrap">
-            <div class="cart-product">
-              <div class="card-prodact-info">
-                <div class="card-image">
-                  <picture>
-                    <source srcset="./img/basket/img_card.webp" type="image/webp" />
-                    <img src="./img/basket/img_card.jpg" alt="картинка товара" class="card__img" />
-                  </picture>
-                  <!-- <span class="skidka_on show">-26%</span> -->
-                </div>
-                <div class="card-description">
+
+          <div class="prodacts-selected">
+            <div class="prodacts-options">
+              <div class="prodacts-options_name">
+                <span>Товар</span>
+              </div>
+              <div class="prodacts-options_sale">
+                <span>Скидка</span>
+              </div>
+              <div class="prodacts-options_price">
+                <span>Цена</span>
+              </div>
+              <div class="prodacts-options_quantity">
+                <span>Количество</span>
+              </div>
+              <div class="prodacts-options_amount">
+                <span>Итого</span>
+              </div>
+            </div>
+            <div class="cart-product__wrap">
+              <div class="cart-product">
+                <div class="card-prodact-info">
+                  <div class="card-image">
+                    <picture>
+                      <source srcset="./img/basket/img_card.webp" type="image/webp" />
+                      <img src="./img/basket/img_card.jpg" alt="картинка товара" class="card__img" />
+                    </picture>
+                    <!-- <span class="skidka_on show">-26%</span> -->
+                  </div>
                   <div class="card__name">
                     <p class="self_name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
-                    <span>Артикул MK64713251</span>
+                    <span class="article">Артикул MK64713251</span>
                   </div>
-                  <div class="card__sale centre_flex">
-                    <span>0%</span>
-                  </div>
-                  <div class="card__price centre_flex">
-                    <span>3 460 руб</span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-prodact-amount">
-                <div class="prod_count">
-                  <div class="prod_count_btn">
-                    <span class="btn-count minus">-</span>
-                    <div class="btn-count count">1</div>
-                    <span class="btn-count plus">+</span>
+                  <div class="card-description">
+                    <div class="card__sale centre_flex">
+                      <span>0%</span>
+                    </div>
+                    <div class="card__price centre_flex">
+                      <span>3 460 руб</span>
+                    </div>
                   </div>
                 </div>
-                <div class="price_area centre_flex">
-                  <span class="price"> <span>3 460</span> руб. </span>
-                  <!-- <span class="old_price">8 144 руб.</span> -->
+                <div class="card-prodact-amount">
+                  <div class="prod_count">
+                    <div class="prod_count_btn">
+                      <span class="btn-count minus">-</span>
+                      <div class="btn-count count">1</div>
+                      <span class="btn-count plus">+</span>
+                    </div>
+                  </div>
+                  <div class="price_area centre_flex">
+                    <span class="price"> <span>3 460</span> руб. </span>
+                    <!-- <span class="old_price">8 144 руб.</span> -->
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="prod_order">
-          <div class="promocode_block">
-            <p class="promocode_text">Введите промокод:</p>
-            <div class="centre">
-              <input class="promocode_input" type="text" placeholder="Промокод" />
-              <button type="button" class="promocode_button">Применить</button>
+          <div class="prod_order">
+            <div class="promocode_block">
+              <p class="promocode_text">Введите промокод:</p>
+              <div class="centre">
+                <input class="promocode_input" type="text" placeholder="Промокод" />
+                <button type="button" class="promocode_button">Применить</button>
+              </div>
+            </div>
+            <div class="tab_final_price">
+              <div class="final_price">
+                <p class="prod_number">В корзине <span>4</span> товара</p>
+                <p class="price">Итого: <span>17 182 руб.</span></p>
+                <span class="old_price">18 328 руб.</span>
+              </div>
+              <div class="centre">
+                <button type="button" class="checkout checkout_js">Оформить заказ</button>
+              </div>
+            </div>
+            <div class="market_icons">
+              <ul class="header_icon_svg">
+                <li class="market_icon_item list">
+                  <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="" />
+                  <span class="red_notification active">4</span>
+                </li>
+                <li class="market_icon_item list">
+                  <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="" />
+                  <span class="red_notification"></span>
+                </li>
+                <li class="market_icon_item list">
+                  <img src="./img/svg/heart.svg" class="menu_icon_item" alt="" />
+                  <span class="red_notification"></span>
+                </li>
+                <li class="market_icon_item list">
+                  <img src="./img/svg/chel.svg" class="menu_icon_item" alt="" />
+                  <span class="red_notification"></span>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="tab_final_price">
-            <div class="final_price">
-              <p class="prod_number">В корзине <span>4</span> товара</p>
-              <p class="price">Итого: <span>17 182 руб.</span></p>
-              <span class="old_price">18 328 руб.</span>
-            </div>
-            <div class="centre">
-              <button type="button" class="checkout checkout_js">Оформить заказ</button>
-            </div>
-          </div>
-          <div class="market_icons">
-            <ul class="header_icon_svg">
-              <li class="market_icon_item list">
-                <img src="./img/svg/corzina.svg" class="menu_icon_item active" alt="" />
-                <span class="red_notification active">4</span>
-              </li>
-              <li class="market_icon_item list">
-                <img src="./img/svg/grafik.svg" class="menu_icon_item" alt="" />
-                <span class="red_notification"></span>
-              </li>
-              <li class="market_icon_item list">
-                <img src="./img/svg/heart.svg" class="menu_icon_item" alt="" />
-                <span class="red_notification"></span>
-              </li>
-              <li class="market_icon_item list">
-                <img src="./img/svg/chel.svg" class="menu_icon_item" alt="" />
-                <span class="red_notification"></span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        </form>
       </div>
     </section>
 
