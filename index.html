@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./sass/main_basket.css" />
+    <link rel="stylesheet" href="./sass/main_styles.css" />
     <title>Корзина</title>
   </head>
   <body>
@@ -204,7 +204,7 @@
     <section class="basket">
       <div class="container">
         <p class="breadcrumbs">Главная - Корзина</p>
-        <form>
+        <form action="##">
           <h1 class="titel_page">Корзина</h1>
           <p>Готовы к заказу (<span>4</span>)</p>
 
@@ -219,149 +219,166 @@
             </button>
           </div>
 
-          <div class="prodacts-selected">
-            <div class="prodacts-options">
-              <div class="prodacts-options_name">
-                <span>Товар</span>
-              </div>
-              <div class="prodacts-options_sale">
-                <span>Скидка</span>
-              </div>
-              <div class="prodacts-options_price">
-                <span>Цена</span>
-              </div>
-              <div class="prodacts-options_quantity">
-                <span>Количество</span>
-              </div>
-              <div class="prodacts-options_amount">
-                <span>Итого</span>
+          <div class="products">
+            <!-- шапка корзины -->
+            <div class="products-header">
+              <div class="products__column products__name">Товар</div>
+              <div class="roducts__column products__options">
+                <div class="products__column products__sale">Скидка</div>
+                <div class="products__column products__price">Цена</div>
+                <div class="products__column products__quantity">Количество</div>
+                <div class="products__column products__amount">Итого</div>
               </div>
             </div>
-            <div class="cart-product__wrap">
-              <div class="cart-product">
-                <div class="card-prodact-info">
-                  <div class="card-image">
+
+            <!-- обычный товар -->
+            <div class="products-item">
+              <div class="products-item-inner">
+                <div class="products-item-inner__info">
+                  <div class="products-item-inner__img">
                     <picture>
                       <source srcset="./img/basket/img_card.webp" type="image/webp" />
                       <img src="./img/basket/img_card.jpg" alt="картинка товара" class="card__img" />
                     </picture>
-                    <span class="skidka_on">-26%</span>
                   </div>
-                  <div class="card__name">
-                    <p class="self_name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
-                    <span class="article">Артикул MK64713251</span>
-                    <span>Скидка 0%</span>
-                  </div>
-                  <div class="card-description">
-                    <div class="card__sale centre_flex">
-                      <span>0%</span>
-                    </div>
-                    <div class="card__price centre_flex">
-                      <span>3 460 руб</span>
-                    </div>
+                  <div class="products-item-inner__title">
+                    <p class="products-item-inner__name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
+                    <p class="products-item-inner__setting">Артикул MK64713251</p>
+                    <p class="products-item-inner__setting products-item-inner__setting_sale">Скидка 0%</p>
                   </div>
                 </div>
-                <div class="card-prodact-amount">
-                  <div class="prod_count">
+
+                <div class="products-item-inner__options">
+                  <div class="products-item-inner__sale">0%</div>
+                  <div class="products-item-inner__price">3 460 руб.</div>
+                  <div class="products-item-inner__quantity">
                     <div class="prod_count_btn">
                       <span class="btn-count minus">-</span>
                       <div class="btn-count count">1</div>
                       <span class="btn-count plus">+</span>
                     </div>
                   </div>
-                  <div class="price_area centre_flex">
-                    <span class="price"> <span>3 460</span> руб. </span>
-                    <!-- <span class="old_price">8 144 руб.</span> -->
-                  </div>
+                  <div class="products-item-inner__amount">3 460 руб.</div>
                 </div>
               </div>
-              <div class="delete-prodact">
-                <img src="./img/svg/del_cross.svg" alt="удалить товар" />
+              <div class="products-item-remove">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6234 0.376577C18.1255 0.87868 18.1255 1.69275 17.6234 2.19485L2.19485 17.6234C1.69275 18.1255 0.87868 18.1255 0.376577 17.6234C-0.125526 17.1213 -0.125526 16.3073 0.376577 15.8051L15.8051 0.376577C16.3073 -0.125526 17.1213 -0.125526 17.6234 0.376577Z"
+                    fill="#D0CFCF"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.376577 0.376577C0.87868 -0.125526 1.69275 -0.125526 2.19485 0.376577L17.6234 15.8051C18.1255 16.3073 18.1255 17.1213 17.6234 17.6234C17.1213 18.1255 16.3073 18.1255 15.8051 17.6234L0.376577 2.19485C-0.125526 1.69275 -0.125526 0.87868 0.376577 0.376577Z"
+                    fill="#D0CFCF"
+                  />
+                </svg>
               </div>
             </div>
-            <div class="cart-product__wrap">
-              <div class="cart-product">
-                <div class="card-prodact-info">
-                  <div class="card-image">
+
+            <!-- один остаток -->
+            <div class="products-item one-remainder">
+              <div class="products-item-inner">
+                <div class="products-item-inner__info">
+                  <div class="products-item-inner__img">
                     <picture>
-                      <source srcset="./img/basket/img_card.webp" type="image/webp" />
-                      <img src="./img/basket/img_card.jpg" alt="картинка товара" class="card__img" />
+                      <source srcset="./img/basket/img_card_2.webp" type="image/webp" />
+                      <img src="./img/basket/img_card_2.jpg" alt="картинка товара" class="card__img" />
                     </picture>
-                    <span class="skidka_on">-26%</span>
                   </div>
-                  <div class="card__name">
-                    <p class="self_name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
-                    <span class="article">Артикул MK64713251</span>
-                    <span>Скидка 0%</span>
-                  </div>
-                  <div class="card-description">
-                    <div class="card__sale centre_flex">
-                      <span>0%</span>
-                    </div>
-                    <div class="card__price centre_flex">
-                      <span>3 460 руб</span>
-                    </div>
+                  <div class="products-item-inner__title">
+                    <p class="products-item-inner__name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
+                    <p class="products-item-inner__setting">Артикул MK64713251</p>
+                    <p class="products-item-inner__setting products-item-inner__setting_sale">Скидка 0%</p>
                   </div>
                 </div>
-                <div class="card-prodact-amount">
-                  <div class="prod_count">
+                <div class="products-item-inner__options">
+                  <div class="products-item-inner__sale">0%</div>
+                  <div class="products-item-inner__price">7 724 руб.</div>
+                  <div class="products-item-inner__quantity">
                     <div class="prod_count_btn disabled">
                       <span class="btn-count minus">-</span>
                       <div class="btn-count count">1</div>
                       <span class="btn-count plus">+</span>
                     </div>
                   </div>
-                  <div class="price_area centre_flex">
-                    <span class="price"> <span>3 460</span> руб. </span>
-                    <!-- <span class="old_price">8 144 руб.</span> -->
-                  </div>
+                  <div class="products-item-inner__amount">7 724 руб.</div>
                 </div>
               </div>
-              <div class="delete-prodact">
-                <img src="./img/svg/del_cross.svg" alt="удалить товар" />
+              <div class="products-item-remove">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6234 0.376577C18.1255 0.87868 18.1255 1.69275 17.6234 2.19485L2.19485 17.6234C1.69275 18.1255 0.87868 18.1255 0.376577 17.6234C-0.125526 17.1213 -0.125526 16.3073 0.376577 15.8051L15.8051 0.376577C16.3073 -0.125526 17.1213 -0.125526 17.6234 0.376577Z"
+                    fill="#D0CFCF"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.376577 0.376577C0.87868 -0.125526 1.69275 -0.125526 2.19485 0.376577L17.6234 15.8051C18.1255 16.3073 18.1255 17.1213 17.6234 17.6234C17.1213 18.1255 16.3073 18.1255 15.8051 17.6234L0.376577 2.19485C-0.125526 1.69275 -0.125526 0.87868 0.376577 0.376577Z"
+                    fill="#D0CFCF"
+                  />
+                </svg>
               </div>
             </div>
-            <div class="cart-product__wrap">
-              <div class="cart-product">
-                <div class="card-prodact-info">
-                  <div class="card-image">
+
+            <!-- скидка на товар -->
+            <div class="products-item discount-product">
+              <div class="products-item-inner">
+                <div class="products-item-inner__info">
+                  <div class="products-item-inner__img">
                     <picture>
                       <source srcset="./img/basket/img_card_3.webp" type="image/webp" />
                       <img src="./img/basket/img_card_3.jpg" alt="картинка товара" class="card__img" />
                     </picture>
-                    <span class="skidka_on show">-26%</span>
                   </div>
-                  <div class="card__name">
-                    <p class="self_name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
-                    <span class="article">Артикул MK64713251</span>
-                    <span>Скидка -26%</span>
-                  </div>
-                  <div class="card-description">
-                    <div class="card__sale centre_flex">
-                      <span>-26%</span>
-                    </div>
-                    <div class="card__price centre_flex">
-                      <span>3 460 руб</span>
-                      <span class="old_price">8 144 руб.</span>
-                    </div>
+                  <div class="products-item-inner__title">
+                    <p class="products-item-inner__name">Meliodent HC, 1kg, 42 - розовый c прожилками</p>
+                    <p class="products-item-inner__setting">Артикул MK64713251</p>
+                    <p class="products-item-inner__setting products-item-inner__setting_sale">Скидка 0%</p>
                   </div>
                 </div>
-                <div class="card-prodact-amount">
-                  <div class="prod_count">
-                    <div class="prod_count_btn">
-                      <span class="btn-count minus">-</span>
-                      <div class="btn-count count">1</div>
-                      <span class="btn-count plus">+</span>
+
+                <div class="products-item-inner__options">
+                  <div class="products-item-inner__info-right">
+                    <div class="products-item-inner__sale">-26%</div>
+                    <div class="products-item-inner__sale-price">
+                      <div class="products-item-inner__price">2 999 руб.</div>
+                      <div class="products-item-inner__price old-price">4 072 руб.</div>
                     </div>
-                  </div>
-                  <div class="price_area centre_flex">
-                    <span class="price"> <span>3 460</span> руб. </span>
-                    <span class="old_price">8 144 руб.</span>
+                    <div class="products-item-inner__quantity">
+                      <div class="prod_count_btn">
+                        <span class="btn-count minus">-</span>
+                        <div class="btn-count count">1</div>
+                        <span class="btn-count plus">+</span>
+                      </div>
+                    </div>
+                    <div class="products-item-inner__sale-amount">
+                      <div class="products-item-inner__amount">5 998 руб.</div>
+                      <div class="products-item-inner__old-amount">8 144 руб.</div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="delete-prodact">
-                <img src="./img/svg/del_cross.svg" alt="удалить товар" />
+              <div class="products-item-remove">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.6234 0.376577C18.1255 0.87868 18.1255 1.69275 17.6234 2.19485L2.19485 17.6234C1.69275 18.1255 0.87868 18.1255 0.376577 17.6234C-0.125526 17.1213 -0.125526 16.3073 0.376577 15.8051L15.8051 0.376577C16.3073 -0.125526 17.1213 -0.125526 17.6234 0.376577Z"
+                    fill="#D0CFCF"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.376577 0.376577C0.87868 -0.125526 1.69275 -0.125526 2.19485 0.376577L17.6234 15.8051C18.1255 16.3073 18.1255 17.1213 17.6234 17.6234C17.1213 18.1255 16.3073 18.1255 15.8051 17.6234L0.376577 2.19485C-0.125526 1.69275 -0.125526 0.87868 0.376577 0.376577Z"
+                    fill="#D0CFCF"
+                  />
+                </svg>
               </div>
             </div>
           </div>

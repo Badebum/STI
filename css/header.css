@@ -486,3 +486,21 @@ header {
     padding: 0 15px 0 15px;
   }
 }
+
+
+/* Стили женя */
+.products__column.products__name {
+  width: 672px;
+  height: 40px;
+  border-left: 1px solid #D0CFCF;
+  border-right: 1px solid #D0CFCF;
+  border-top: 1px solid #D0CFCF;
+}
+
+.products__column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
