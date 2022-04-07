@@ -705,28 +705,11 @@ header {
   }
 }
 
-.old_price {
-  position: absolute;
-  left: 24%;
-  top: 20px;
-  font-weight: 400;
-  font-size: 18px;
-  color: #d0cfcf;
-  text-decoration: line-through;
-}
-
 @media screen and (min-width: 1319px) {
   .breadcrumbs {
     margin: 25px 0 34px 0;
   }
-  .old_price {
-    position: absolute;
-    font-size: 20px;
-    font-size: 22px;
-    line-height: 19px;
-    left: 40px;
-    top: 125px;
-  }
+
   .prod_count_btn {
     width: 110px;
     height: 44px;
@@ -776,6 +759,35 @@ header {
   background-color: #ec1e22;
 }
 
+.basket-final-price .final-price {
+  border: none;
+  height: 0;
+  padding: 5px;
+}
+
+.basket-final-price .final-price-options {
+  margin: 0;
+}
+
+.basket-checkout-link {
+  text-decoration: none;
+  display: block;
+  width: 288px;
+  height: 42px;
+  background: #ec1e22;
+  border: 1px solid #ec1e22;
+  border-radius: 1px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* стили страницы order */
 .main-title-page {
   font-weight: 700;
   font-size: 24px;
@@ -1177,6 +1189,16 @@ header {
   }
 }
 
+/* .basket-final-price */
+
+.basket-final-price .final-price-options_prod_number {
+  display: none;
+}
+
+.basket-final-price .final-price {
+    margin-bottom: 70px;
+  }
+
 .submit-form-button .checkout {
   width: 288px;
   height: 42px;
@@ -1193,6 +1215,16 @@ header {
 
 .promocode_input {
   outline: 1px solid #d0cfcf;
+}
+
+@media screen and (min-width: 480px) {
+  .basket-final-price .final-price-options_prod_number {
+    display: block;
+  }
+
+  .basket-final-price .final-price {
+    margin-bottom: 70px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1230,15 +1262,6 @@ header {
     margin: 0 0 23px 0;
     text-align: right;
   }
-  .final_price {
-    text-align: right;
-  }
-  .final_price .old_price {
-    left: 37%;
-    font-size: 26px;
-    line-height: 29px;
-    top: 70px;
-  }
 }
 
 @media screen and (min-width: 1320px) {
@@ -1266,20 +1289,9 @@ header {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .tab_final_price {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-  }
-}
+/* @media screen and (min-width: 1024px) {
+  
+} */
 
 /* Checked */
 
