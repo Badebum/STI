@@ -290,11 +290,17 @@
             <div>
               <h3 class="title_block">Ваш заказ</h3>
 
-              <div class="final_price">
-                <p class="count">В корзине: <span class="num">4</span> товара</p>
-                <p class="count">Доставка: <span class="deli">По тарифам ТК</span></p>
-                <p class="price">Итого: <span>17 182</span> руб.</p>
-                <span class="old_price">18 328 руб.</span>
+              <div class="final-price">
+                <div class="final-price-options">
+                  <p class="final-price-options_prod_number">В корзине: <span class="number">4</span> товара</p>
+                  <p class="final-price-options_prod_rate">Доставка: <span class="rate">По тарифам ТК</span></p>
+                </div>
+                <div class="final-price-item-both_price">
+                  <div class="final-price-items">
+                    <p class="final-price-items_price">Итого: <span>17 182</span> руб.</p>
+                    <p class="final-price-items_old_price"><span>19 182</span> руб.</p>
+                  </div>
+                </div>
               </div>
               <div class="polici_block">
                 <input type="checkbox" id="polici_chek" />
@@ -331,6 +337,6 @@
         </form>
       </div>
     </section>
-    <script src="./js/main.js" ></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

@@ -1452,7 +1452,7 @@ body {
   margin-bottom: 20px;
 }
 
-.our_order .final_price {
+.final-price {
   min-width: 288px;
   height: 153px;
   border: 1px solid #d0cfcf;
@@ -1461,7 +1461,7 @@ body {
   padding: 14px 10px 45px 10px;
 }
 
-.our_order .count {
+.final-price-options_prod_number, .final-price-options_prod_rate {
   font-weight: 400;
   font-size: 16px;
   line-height: 15px;
@@ -1470,26 +1470,52 @@ body {
   margin-bottom: 10px;
 }
 
-.our_order .count .num {
+.final-price-options_prod_number .number, .final-price-options_prod_rate .number {
   margin-left: 21px;
 }
 
-.our_order .count .deli {
+.final-price-options_prod_number .rate, .final-price-options_prod_rate .rate {
   margin-left: 26px;
 }
 
-.our_order .price {
-  color: #383838;
-  margin: 34px 0 45px 0;
+.final-price-options {
+  margin-bottom: 34px;
 }
 
-.our_order .old_price {
-  top: 118px;
-  left: 100px;
+.final-price-item-both_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.our_order .header_icon_svg {
-  width: 100%;
+.final-price-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'PT Sans Caption';
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.final-price-items_price {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.final-price-items_old_price {
+  font-size: 26px;
+  line-height: 22px;
+  text-decoration: line-through;
+  color: #d0cfcf;
+  margin: 0;
 }
 
 .polici_block {
@@ -1545,28 +1571,6 @@ body {
   }
   .our_order {
     margin-bottom: 50px;
-  }
-  .our_order .final_price {
-    min-width: 720px;
-    height: 140px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .our_order .price {
-    margin: 0;
-    margin-top: 31px;
-  }
-  .our_order .old_price {
-    top: 87px;
-    left: 257px;
   }
   .our_order .checkout.disabled {
     cursor: default;

@@ -188,18 +188,17 @@ body {
   }
 }
 
-.our_order {
-  & .final_price {
-    min-width: 288px;
-    height: 153px;
+.final-price {
+  min-width: 288px;
+  height: 153px;
 
-    border: 1px solid #d0cfcf;
-    border-radius: 1px;
-    margin-bottom: 31px;
-    padding: 14px 10px 45px 10px;
-  }
+  border: 1px solid #d0cfcf;
+  border-radius: 1px;
+  margin-bottom: 31px;
+  padding: 14px 10px 45px 10px;
 
-  & .count {
+  &-options_prod_number,
+  &-options_prod_rate {
     font-weight: 400;
     font-size: 16px;
     line-height: 15px;
@@ -208,28 +207,45 @@ body {
     margin: 0;
     margin-bottom: 10px;
 
-    & .num {
+    & .number {
       margin-left: 21px;
     }
 
-    & .deli {
+    & .rate {
       margin-left: 26px;
     }
   }
+}
 
-  & .price {
-    color: #383838;
-    margin: 34px 0 45px 0;
-  }
+.final-price-options {
+  margin-bottom: 34px;
+}
 
-  & .old_price {
-    top: 118px;
-    left: 100px;
-  }
+.final-price-item-both_price {
+  display: flex;
+}
 
-  & .header_icon_svg {
-    width: 100%;
-  }
+.final-price-items {
+  display: flex;
+  flex-direction: column;
+  font-family: 'PT Sans Caption';
+  align-items: flex-end;
+}
+
+.final-price-items_price {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.final-price-items_old_price {
+  font-size: 26px;
+  line-height: 22px;
+  text-decoration: line-through;
+  color: #d0cfcf;
+  margin: 0;
 }
 
 .polici_block {
@@ -286,24 +302,6 @@ body {
 
   .our_order {
     margin-bottom: 50px;
-
-    & .final_price {
-      min-width: 720px;
-      height: 140px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    & .price {
-      margin: 0;
-      margin-top: 31px;
-    }
-
-    & .old_price {
-      top: 87px;
-      left: 257px;
-    }
 
     // конечная кнопка заказа
 
