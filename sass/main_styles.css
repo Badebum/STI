@@ -1153,6 +1153,18 @@ header {
   line-height: 17px;
 }
 
+@media screen and (min-width: 768px) {
+  .basket-final-price .final-price-items {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .basket-final-price .final-price-items_price {
+    margin-right: 0;
+    margin-bottom: 19px;
+  }
+}
+
 @media screen and (min-width: 1320px) {
   .title_block {
     height: 69px;
@@ -1196,8 +1208,8 @@ header {
 }
 
 .basket-final-price .final-price {
-    margin-bottom: 70px;
-  }
+  margin-bottom: 70px;
+}
 
 .submit-form-button .checkout {
   width: 288px;
@@ -1222,8 +1234,8 @@ header {
     display: block;
   }
 
-  .basket-final-price .final-price {
-    margin-bottom: 70px;
+  .basket-final-price .final-price-options_prod_number .number {
+    margin-left: 0;
   }
 }
 
@@ -1262,6 +1274,63 @@ header {
     margin: 0 0 23px 0;
     text-align: right;
   }
+
+  .basket-final-price .final-price-item-both_price {
+    display: block;
+  }
+
+  .basket-final-price .final-price-options {
+    text-align: right;
+    margin-bottom: 23px;
+  }
+
+  .basket-final-price .final-price {
+    height: auto;
+    margin-bottom: 19px;
+  }
+
+  .basket-final-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .basket-checkout-link {
+    width: 186px;
+    height: 42px;
+    line-height: 14px;
+  }
+
+  .final-price-items_price,
+  .final-price-items_old_price {
+    font-size: 28px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-final-price .final-price {
+    display: flex;
+  }
+
+  .basket-final-price .final-price-options_prod_number {
+    margin-right: 42px;
+    font-size: 22px;
+    line-height: 19px;
+    margin-bottom: 0;
+  }
+
+  .basket-final-price .final-price-items_price,
+  .basket-final-price .final-price-items_old_price {
+    font-size: 34px;
+    line-height: 29px;
+  }
+
+  .basket-checkout-link {
+    width: 224px;
+    height: 48px;
+    line-height: 15px;
+  }
 }
 
 @media screen and (min-width: 1320px) {
@@ -1271,11 +1340,13 @@ header {
     margin-right: 24px;
     padding-left: 16px;
   }
+
   .promocode_button {
     margin: 0;
     width: 200px;
     height: 48px;
   }
+
   .final_price {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1288,10 +1359,6 @@ header {
     margin-right: 42px;
   }
 }
-
-/* @media screen and (min-width: 1024px) {
-  
-} */
 
 /* Checked */
 
