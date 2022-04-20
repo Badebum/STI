@@ -2,7 +2,7 @@
 const checkoutSubmitBtn = document.querySelector('.checkout_submit_js');
 const policiRef = document.querySelector('#polici_chek');
 
-policiRef.addEventListener('click', policiChecked);
+// policiRef.addEventListener('click', policiChecked);
 function policiChecked() {
   if (policiRef.checked) {
     checkoutSubmitBtn.classList.remove('disabled');

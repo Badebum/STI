@@ -8,6 +8,14 @@
     <title>Корзина</title>
   </head>
   <body>
+
+<section>
+  <tr style="background-color: #faf0e7 !important;">
+<td colspan="2" style="color:#fff"> Услуга входит в программы: </td>
+<td></td>
+</tr>
+</section>
+
     <header>
       <!-- mobile menu -->
       <div class="red_mobile_menu container">
@@ -201,6 +209,8 @@
       </div>
     </header>
 
+    
+
     <section class="basket">
       <div class="container">
         <p class="breadcrumbs">Главная - Корзина</p>
@@ -250,15 +260,15 @@
 
                 <div class="products-item-inner__options">
                   <div class="products-item-inner__sale">0%</div>
-                  <div class="products-item-inner__price">3 460 руб.</div>
+                  <div class="products-item-inner__price"><span>3 460</span> руб.</div>
                   <div class="products-item-inner__quantity">
                     <div class="prod_count_btn">
-                      <span class="btn-count minus">-</span>
-                      <div class="btn-count count">1</div>
-                      <span class="btn-count plus">+</span>
+                      <span class="btn-count minus-js minus">-</span>
+                      <div class="btn-count count-js count">1</div>
+                      <span class="btn-count plus-js  plus">+</span>
                     </div>
                   </div>
-                  <div class="products-item-inner__amount">3 460 руб.</div>
+                  <div class="products-item-inner__amount"><span>3 460</span> руб.</div>
                 </div>
               </div>
               <div class="products-item-remove">
@@ -300,9 +310,9 @@
                   <div class="products-item-inner__price">7 724 руб.</div>
                   <div class="products-item-inner__quantity">
                     <div class="prod_count_btn disabled">
-                      <span class="btn-count minus">-</span>
-                      <div class="btn-count count">1</div>
-                      <span class="btn-count plus">+</span>
+                      <span class="btn-count minus minus-js">-</span>
+                      <div class="btn-count count count-js">1</div>
+                      <span class="btn-count plus plus-js ">+</span>
                     </div>
                   </div>
                   <div class="products-item-inner__amount">7 724 руб.</div>
@@ -352,9 +362,9 @@
                     </div>
                     <div class="products-item-inner__quantity">
                       <div class="prod_count_btn">
-                        <span class="btn-count minus">-</span>
-                        <div class="btn-count count">1</div>
-                        <span class="btn-count plus">+</span>
+                        <span class="btn-count minus minus-js">-</span>
+                        <div class="btn-count count count-js">1</div>
+                        <span class="btn-count plus plus-js ">+</span>
                       </div>
                     </div>
                     <div class="products-item-inner__sale-amount">
@@ -487,5 +497,6 @@
     </div>
 
     <script src="./js/main.js"></script>
+    <script src="./counter.js"></script>
   </body>
 </html>

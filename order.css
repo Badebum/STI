@@ -2125,3 +2125,18 @@ input:focus {
 /* 
 @media screen and (max-width: 480px)
 @media screen and (max-width: 375px) */
+
+.head-tr {
+  text-align: center;
+  height: 50px;
+  position: relative;
+  background: url(./tabl_head.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 9px 40px;
+  color: white;
+}
+
+.table-price-detail-page tr:nth-child(2n) {
+  background-color: #faf0e7;
+}
