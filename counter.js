@@ -8,7 +8,6 @@ const cardProdact = document.querySelector('.products-item-inner');
 let cunterProdact = Number(countProd.textContent);
 let prodPrice = Number(curentProdactPrice.textContent.replace(/\s/g, ''));
 let prodactTotalCost = prodPrice;
-let non = 0;
 
 const onClickPlus = () => {
   cunterProdact += 1;
@@ -18,7 +17,7 @@ const onClickPlus = () => {
 };
 
 const onClickMinus = () => {
-  if (cunterProdact <= 1) {
+  if (cunterProdact < 1) {
     cardProdact.remove();
   } else {
     cunterProdact -= 1;
