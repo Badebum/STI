@@ -33,36 +33,18 @@
 //   minusProd.addEventListener('click', onClickMinus);
 // });
 
-// window.addEventListener('DOMContentLoaded', () => {
-//   const countProd = document.querySelectorAll('.count-js');
-//   const curentProdactPrice = document.querySelector('.products-item-inner__price span');
-//   const amountProdactPrice = document.querySelector('.products-item-inner__amount span');
-//   const cardProdact = document.querySelector('.products-item-inner');
+//  const countProd = document.querySelector('.count-js');
+//  const curentProdactPrice = document.querySelector('.products-item-inner__price span');
+//  const amountProdactPrice = document.querySelector('.products-item-inner__amount span');
 
-//   countProd.forEach(el => {
-//     let cunterProdact = Number(el.textContent);
-//     let prodPrice = Number(curentProdactPrice.textContent.replace(/\s/g, ''));
-//     let prodactTotalCost = prodPrice;
+window.addEventListener('DOMContentLoaded', () => {
+  const cardProdact = document.querySelectorAll('.products-item-inner');
 
-//     el.nextElementSibling.addEventListener('click', () => {
-//       cunterProdact += 1;
-//       el.textContent = cunterProdact;
-//       prodactTotalCost += prodPrice;
-//       amountProdactPrice.textContent = prodactTotalCost;
+  cardProdact.onclick = function (event) {
+    let target = event.target; // где был клик?
 
-//       console.log(cunterProdact);
-//     });
+    if (target.tagName != 'TD') return; // не на TD? тогда не интересует
 
-//     el.previousElementSibling.addEventListener('click', () => {
-//       if (cunterProdact <= 1) {
-//         cardProdact.remove();
-//       } else {
-//         cunterProdact -= 1;
-//         prodactTotalCost -= prodPrice;
-//         amountProdactPrice.textContent = prodactTotalCost;
-//         el.textContent = cunterProdact;
-//       }
-//       console.log(cunterProdact);
-//     });
-//   });
-// });
+    highlight(target); // подсветить TD
+  };
+});
