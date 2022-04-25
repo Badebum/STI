@@ -38,5 +38,26 @@
 //  const amountProdactPrice = document.querySelector('.products-item-inner__amount span');
 
 window.addEventListener('DOMContentLoaded', () => {
-  const cardProdact = document.querySelectorAll('.products-item-inner');
+  const countProd = document.querySelectorAll('.count-js');
+  const curentProdactPrice = document.querySelector('.products-item-inner__price span');
+  const amountProdactPrice = document.querySelector('.products-item-inner__amount span');
+
+  let prodPrice = Number(curentProdactPrice.textContent.replace(/\s/g, ''));
+  let prodactTotalCost = prodPrice;
+
+  countProd.forEach(el => {
+    Number(el.textContent);
+    el.nextElementSibling.addEventListener('click', () => {
+      el.textContent++;
+
+      prodactTotalCost += prodPrice;
+      amountProdactPrice.textContent = prodactTotalCost;
+    });
+
+    el.previousElementSibling.addEventListener('click', () => {
+      el.textContent--;
+      prodactTotalCost -= prodPrice;
+      amountProdactPrice.textContent = prodactTotalCost;
+    });
+  });
 });
