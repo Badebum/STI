@@ -39,12 +39,4 @@
 
 window.addEventListener('DOMContentLoaded', () => {
   const cardProdact = document.querySelectorAll('.products-item-inner');
-
-  cardProdact.onclick = function (event) {
-    let target = event.target; // где был клик?
-
-    if (target.tagName != 'TD') return; // не на TD? тогда не интересует
-
-    highlight(target); // подсветить TD
-  };
 });
