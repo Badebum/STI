@@ -37,27 +37,73 @@
 //  const curentProdactPrice = document.querySelector('.products-item-inner__price span');
 //  const amountProdactPrice = document.querySelector('.products-item-inner__amount span');
 
+// window.addEventListener('DOMContentLoaded', () => {
+//   const countProd = document.querySelectorAll('.count-js');
+//   const curentProdactPrice = document.querySelector('.products-item-inner__price span');
+//   const amountProdactPrice = document.querySelector('.products-item-inner__amount span');
+
+//   let prodPrice = Number(curentProdactPrice.textContent.replace(/\s/g, ''));
+//   let prodactTotalCost = prodPrice;
+
+//   countProd.forEach(el => {
+//     Number(el.textContent);
+//     el.nextElementSibling.addEventListener('click', () => {
+//       el.textContent++;
+
+//       prodactTotalCost += prodPrice;
+//       amountProdactPrice.textContent = prodactTotalCost;
+//     });
+
+//     el.previousElementSibling.addEventListener('click', () => {
+//       el.textContent--;
+//       prodactTotalCost -= prodPrice;
+//       amountProdactPrice.textContent = prodactTotalCost;
+//     });
+//   });
+// });
+
 window.addEventListener('DOMContentLoaded', () => {
-  const countProd = document.querySelectorAll('.count-js');
-  const curentProdactPrice = document.querySelector('.products-item-inner__price span');
-  const amountProdactPrice = document.querySelector('.products-item-inner__amount span');
+  let cart = {
+    123: 1,
+    321: 1,
+  };
+  const cardProdact = document.querySelectorAll('.prod_count_btn');
 
-  let prodPrice = Number(curentProdactPrice.textContent.replace(/\s/g, ''));
-  let prodactTotalCost = prodPrice;
-
-  countProd.forEach(el => {
-    Number(el.textContent);
-    el.nextElementSibling.addEventListener('click', () => {
-      el.textContent++;
-
-      prodactTotalCost += prodPrice;
-      amountProdactPrice.textContent = prodactTotalCost;
-    });
-
-    el.previousElementSibling.addEventListener('click', () => {
-      el.textContent--;
-      prodactTotalCost -= prodPrice;
-      amountProdactPrice.textContent = prodactTotalCost;
+  cardProdact.forEach(el => {
+    el.addEventListener('click', event => {
+      if (event.target.classList.value.includes('plus-js')) {
+        incrementProductCount(event.target.dataset.id);
+      } else if (event.target.classList.value.includes('minus-js')) {
+        decrementProductCount(event.target.dataset.id);
+      }
     });
   });
+
+  const incrementProductCount = id => {
+    cart[id]++;
+    renderCart();
+  };
+
+  const decrementProductCount = id => {
+    if (cart[id] - 1 == 0) {
+      deleteProdact(id);
+      return true;
+    }
+    cart[id]--;
+    renderCart();
+  };
+
+  const deleteProdact = id => {
+    delete cart[id];
+    renderCart();
+  };
+
+  const renderCart = () => {
+    console.log(cart);
+  };
+  renderCart();
+
+  // const decrementProductCount = () => {
+
+  // };
 });
