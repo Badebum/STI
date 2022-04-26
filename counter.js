@@ -63,47 +63,60 @@
 // });
 
 window.addEventListener('DOMContentLoaded', () => {
-  let cart = {
-    123: 1,
-    321: 1,
+  const cardProdact = document.querySelectorAll('.products-item-inner');
+  // const prodactCount = document.querySelector('.count-js');
+
+  cart = {
+    cart_1: 1,
+    cart_2: 1,
+    cart_3: 1,
   };
-  const cardProdact = document.querySelectorAll('.prod_count_btn');
 
   cardProdact.forEach(el => {
+    const countItem = el.querySelector('.count-js');
+    const prodactProce = el.querySelector('.products-item-inner__price span');
+    const amountProdactPrice = el.querySelector('.products-item-inner__amount span');
+
     el.addEventListener('click', event => {
+      let prodPrice = Number(prodactProce.textContent.replace(/\s/g, ''));
+      count = countItem;
       if (event.target.classList.value.includes('plus-js')) {
-        incrementProductCount(event.target.dataset.id);
+        incrementProductCount(event.target.dataset.id, count, prodPrice, amountProdactPrice);
       } else if (event.target.classList.value.includes('minus-js')) {
-        decrementProductCount(event.target.dataset.id);
+        decrementProductCount(event.target.dataset.id, prodPrice, amountProdactPrice);
       }
     });
   });
 
-  const incrementProductCount = id => {
+  const incrementProductCount = (id, count, prodPrice, amountProdactPrice) => {
+    cart[id] = Number(count.textContent);
     cart[id]++;
-    renderCart();
+    prodPrice = prodPrice * cart[id];
+    amountProdactPrice.textContent = prodPrice;
+    count.textContent = cart[id];
+    // renderCart();
   };
 
-  const decrementProductCount = id => {
-    if (cart[id] - 1 == 0) {
+  const decrementProductCount = (id, prodPrice, amountProdactPrice) => {
+    if (cart[id] == 0) {
       deleteProdact(id);
       return true;
     }
+    cart[id] = Number(count.textContent);
     cart[id]--;
-    renderCart();
+    amountProdactPrice.textContent = prodPrice * cart[id];
+    count.textContent = cart[id];
+    // renderCart();
   };
 
   const deleteProdact = id => {
     delete cart[id];
-    renderCart();
+    // renderCart();
   };
 
-  const renderCart = () => {
-    console.log(cart);
-  };
-  renderCart();
-
-  // const decrementProductCount = () => {
-
+  // const renderCart = () => {
+  //   console.log(cart);
   // };
+
+  // renderCart();
 });
