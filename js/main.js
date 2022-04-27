@@ -33,4 +33,30 @@ window.addEventListener('load', () => {
     }
   };
   calcProductСounter();
+
+  const removeProductItem = () => {
+    const arrProductItem = document.querySelectorAll('.clio-products-item');
+
+    arrProductItem.forEach(productItem => {
+      const removeProductItem = productItem.querySelector('.clio-products-item-remove');
+      removeProductItem.addEventListener('click', () => {
+        productItem.remove();
+      });
+    });
+  };
+
+  removeProductItem();
+
+  const removeAllProductItems = () => {
+    const arrProductItem = document.querySelectorAll('.clio-products-item');
+    const removeButton = document.querySelector('.clio-clean_btn');
+
+    arrProductItem.forEach(productItem => {
+      removeButton.addEventListener('click', () => {
+        productItem.remove();
+      });
+    });
+  };
+
+  removeAllProductItems();
 });
