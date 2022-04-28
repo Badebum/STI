@@ -55,6 +55,8 @@ window.addEventListener('load', () => {
 
   document.addEventListener('click', removeProdact);
 
+  // поле инпут промокода
+
   const promocodeInput = () => {
     const inputPromo = document.querySelector('.clio-promo-input');
     const inputPromoButton = document.querySelector('.clio-promo-btn');
@@ -74,4 +76,37 @@ window.addEventListener('load', () => {
   };
 
   promocodeInput();
+
+  // количество товаров в корзине
+
+  const calcTotalProductItems = (allCard, number) => {
+    window.addEventListener('click', () => {
+      const arrProductItem = document.querySelectorAll(allCard);
+      const numberProductItemsTop = document.querySelector(number);
+      numberProductItemsTop.textContent = arrProductItem.length;
+    });
+  };
+
+  calcTotalProductItems('.clio-products-item', '.clio-quantity-price span');
+  calcTotalProductItems('.clio-products-item', '.clio-readr-order span');
+
+  // подсчет общей цены заказа
+
+  const totalProductPrice = () => {
+    const totalPrice = document.querySelector('.clio-total-price span');
+    const amountProductPrice = document.querySelectorAll('.clio-products-item-inner__amount p');
+
+    const arrTotalPrice = [];
+
+    amountProductPrice.forEach(el => {
+      let slicePrice = +el.textContent.replace(/\s/g, '');
+      arrTotalPrice.push(slicePrice);
+    });
+
+    let calcPrice = arrTotalPrice.reduce((a, b) => a + b);
+  };
+
+  totalProductPrice();
+
+  document.addEventListener('change', totalProductPrice);
 });
