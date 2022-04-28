@@ -34,35 +34,6 @@ window.addEventListener('load', () => {
   };
   calcProductСounter();
 
-  // const removeAllProductItems = el => {
-  //   el = el.target;
-
-  //   const arrProductItem = document.querySelectorAll('.clio-products-item');
-  //   const removeAllItems = document.querySelector('.clio-clean_btn');
-
-  //   if (el == removeAllItems) {
-  //     arrProductItem.forEach(el => {
-  //       el.remove();
-  //     });
-  //   }
-  // };
-
-  // document.addEventListener('click', removeAllProductItems);
-
-  // const removeProductItem = el => {
-  //   el = el.target;
-
-  //   const arrProductItem = document.querySelectorAll('.clio-products-item');
-
-  //   arrProductItem.forEach(() => {
-  //     if (el.closest('.clio-products-item-remove')) {
-  //       el.closest('.clio-products-item').remove();
-  //     }
-  //   });
-  // };
-
-  // document.addEventListener('click', removeProductItem);
-
   const removeProdact = el => {
     el = el.target;
 
@@ -83,4 +54,24 @@ window.addEventListener('load', () => {
   };
 
   document.addEventListener('click', removeProdact);
+
+  const promocodeInput = () => {
+    const inputPromo = document.querySelector('.clio-promo-input');
+    const inputPromoButton = document.querySelector('.clio-promo-btn');
+    const textPromoInput = document.querySelector('.clio-text-promocode b');
+    const removePromocode = document.querySelector('.clio-promocode-remove');
+
+    inputPromoButton.addEventListener('click', () => {
+      if (inputPromo.value.length == 6) {
+        textPromoInput.textContent = inputPromo.value;
+        inputPromo.value = '';
+      }
+    });
+
+    removePromocode.addEventListener('click', () => {
+      textPromoInput.textContent = 'тут нет промокода';
+    });
+  };
+
+  promocodeInput();
 });
