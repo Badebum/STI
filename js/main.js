@@ -34,29 +34,53 @@ window.addEventListener('load', () => {
   };
   calcProductСounter();
 
-  const removeProductItem = () => {
+  // const removeAllProductItems = el => {
+  //   el = el.target;
+
+  //   const arrProductItem = document.querySelectorAll('.clio-products-item');
+  //   const removeAllItems = document.querySelector('.clio-clean_btn');
+
+  //   if (el == removeAllItems) {
+  //     arrProductItem.forEach(el => {
+  //       el.remove();
+  //     });
+  //   }
+  // };
+
+  // document.addEventListener('click', removeAllProductItems);
+
+  // const removeProductItem = el => {
+  //   el = el.target;
+
+  //   const arrProductItem = document.querySelectorAll('.clio-products-item');
+
+  //   arrProductItem.forEach(() => {
+  //     if (el.closest('.clio-products-item-remove')) {
+  //       el.closest('.clio-products-item').remove();
+  //     }
+  //   });
+  // };
+
+  // document.addEventListener('click', removeProductItem);
+
+  const removeProdact = el => {
+    el = el.target;
+
     const arrProductItem = document.querySelectorAll('.clio-products-item');
 
-    arrProductItem.forEach(productItem => {
-      const removeProductItem = productItem.querySelector('.clio-products-item-remove');
-      removeProductItem.addEventListener('click', () => {
-        productItem.remove();
+    //удаление одного продукта
+    if (el.closest('.clio-products-item-remove')) {
+      el.closest('.clio-products-item').remove();
+    }
+
+    //удаление всех продуктов
+
+    if (el.closest('.clio-clean_btn')) {
+      arrProductItem.forEach(el => {
+        el.remove();
       });
-    });
+    }
   };
 
-  removeProductItem();
-
-  const removeAllProductItems = () => {
-    const arrProductItem = document.querySelectorAll('.clio-products-item');
-    const removeButton = document.querySelector('.clio-clean_btn');
-
-    arrProductItem.forEach(productItem => {
-      removeButton.addEventListener('click', () => {
-        productItem.remove();
-      });
-    });
-  };
-
-  removeAllProductItems();
+  document.addEventListener('click', removeProdact);
 });
